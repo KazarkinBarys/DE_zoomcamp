@@ -1,0 +1,49 @@
+###
+### A complete description of a Prefect Deployment for flow 'main-flow'
+###
+name: week_4flow
+description: null
+version: f8b1ec94e7e442fc3ed970184bdaa8ca
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: /mnt/c/dataengeneering/zoomcamp/week_4
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main-flow
+manifest_path: null
+storage: null
+path: /mnt/c/dataengeneering/zoomcamp/week_4
+entrypoint: pyt_4g.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    year:
+      title: year
+      position: 0
+    months:
+      title: months
+      position: 1
+    color:
+      title: color
+      position: 2
+  required:
+  - year
+  - months
+  - color
+  definitions: null
